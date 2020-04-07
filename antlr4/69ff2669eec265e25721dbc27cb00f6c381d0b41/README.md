@@ -4,7 +4,7 @@
 ## 2. Checkout to merge the commit hash
     git checkout 69ff2669eec265e25721dbc27cb00f6c381d0b41
 
-## 3. Edit the modules tag on the __pom.xml__ at the root of the project
+## 3. Edit the modules tag on the _pom.xml_ at the root of the project
 
 ```xml
 <modules>
@@ -13,7 +13,7 @@
     <module>antlr4-maven-plugin</module>
 </modules>
 ``` 
-## 4. Edit the build tag on the __pom.xml__ at the root of the project add the plugin
+## 4. Edit the build tag on the _pom.xml_ at the root of the project add the plugin
 
 ```xml
 <plugin>
@@ -30,7 +30,7 @@
     </configuration> 
 </plugin> 
 ``` 
-## 5. Edit the __.travis.yml__ 
+## 5. Edit the _.travis.yml_ 
 ```yml
 script:
   - mvn install
