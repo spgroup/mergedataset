@@ -294,15 +294,14 @@
 4. Inside the folder **spring-boot** run the command:
    `mvn clean compile assembly:single`
 
-   if you recive the error:
+   if you recive this error:
 
    ```
    [ERROR] [ERROR] Some problems were encountered while processing the POMs:
    [FATAL] Non-resolvable parent POM for org.springframework.boot:spring-boot:[unknown-version]: Could not find artifact org.springframework.boot:spring-boot-parent:pom:1.3.1.BUILD-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 4, column 10
-
    ```
 
-   change de parents tags for:
+   replace the **parent** tags for:
 
    ```
    <groupId>org.springframework.boot</groupId>
@@ -320,7 +319,7 @@
 8. Checkout to right commit hash and repeat steps 4 and 5:  
    `git checkout 0f3f4b75b0e8bb386dd1618b50e7240a572e6eda`
 9. Identify the base commit hash. (**git merge-base <left_commit_hash> <right_commit_hash>**)  
-   Run: `git merge-base f01b90668be552ec5139264cda72c0924a5451e3 0f3f4b75b0e8bb386dd1618b50e7240a572e6eda`.  
-   Receive the output: `cb0226b2312dcd69c16d4dc0825f02c72471a8d8`
+   Run: `git merge-base dd4b9b1788862933e714700aa4caa425e3fc154c 2fe08194950356f247107a256da91a3560b80fa3`.  
+   Receive the output: `604ca524912c7a4e105746138bafc1eeedec3b50`
 10. Checkout to base commit hash and repeat steps 4 and 5:  
-    `git checkout cb0226b2312dcd69c16d4dc0825f02c72471a8d8`
+    `git checkout 604ca524912c7a4e105746138bafc1eeedec3b50`
