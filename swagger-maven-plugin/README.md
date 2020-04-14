@@ -4,7 +4,7 @@
 ## 2. Checkout to merge the commit hash
     git checkout e825a7fdc6ef688f1253b93d2cb236e710acfc56
 
-## 3. Edit the build (<build> <plugins>  HERE ... </plugins> </build>) tag on the _pom.xml_ at the root and add the plugin
+## 3. Edit the build (_<build> <plugins>_  HERE ... _</plugins> </build>_) tag on the _pom.xml_ at the root and add the plugin
 
 ```xml
 <plugin>

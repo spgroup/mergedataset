@@ -16,7 +16,7 @@ Change to:
 
 ## PS.: The build should be run at each module separately, but first edit the root build file
 
-## 4. Edit the build tag (<build> <plugins>  HERE ... </plugins> </build>) on the _pom.xml_ at the root of the project e at all the modules add the plugin. PS.: If the _pom.xml_ file of any module does not have build tag, insert it
+## 4. Edit the build tag (_<build> <plugins>_)  HERE ... _</plugins> </build>_) on the _pom.xml_ at the root of the project e at all the modules add the plugin. PS.: If the _pom.xml_ file of any module does not have build tag, insert it
 
 ```xml
 <plugin>
