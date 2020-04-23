@@ -1,8 +1,8 @@
  ## 1. Clone the project 
-    git clone https://github.com/kongchen/swagger-maven-plugin
+    git clone https://github.com/CloudSlang/cloud-slang.git
 
 ## 2. Checkout to merge the commit hash
-    git checkout e825a7fdc6ef688f1253b93d2cb236e710acfc56
+    git checkout 20bac30d9bd76569aa6a4fa1e8261c1a9b5e6f76
 
 ## 3. Edit the build (```<build> <plugins> ```  HERE ... ```</plugins> </build>```) tag on the _pom.xml_ at the root and add the plugin
 
@@ -26,23 +26,23 @@
     mvn clean compile assembly:single
 
 ## 5. Check the content folder: 
-    swagger-maven-plugin/target
+    cloud-slang/target
 
 ## 6. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)
-    Run: git log --pretty=%P -n 1 e825a7fdc6ef688f1253b93d2cb236e710acfc56
-    Receive the output: 39a512a79124eba3589eed6c90318717615bcbc7 e19c57742dc052b771e634d804a41ca957176054
+    Run: git log --pretty=%P -n 1 20bac30d9bd76569aa6a4fa1e8261c1a9b5e6f76
+    Receive the output: bfd35a172d9a56fcb4aedd50624f6f227f0af22a 444c02648bd274a6adfbc6c1460d95ab76e95726
 
 ## 7. Checkout to left commit hash and repeat the steps 3 to 5:
-    git checkout 39a512a79124eba3589eed6c90318717615bcbc7
+    git checkout bfd35a172d9a56fcb4aedd50624f6f227f0af22a
 
 ## 9. Checkout to right commit hash and repeat the steps 3 to 5:
-    git checkout e19c57742dc052b771e634d804a41ca957176054
+    git checkout 444c02648bd274a6adfbc6c1460d95ab76e95726
 
 ## 11. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
-    Run: git merge-base 39a512a79124eba3589eed6c90318717615bcbc7 e19c57742dc052b771e634d804a41ca957176054
-    Receive the output: b060894dcff216094743904f8a71228b21a093ed
+    Run: git merge-base bfd35a172d9a56fcb4aedd50624f6f227f0af22a 444c02648bd274a6adfbc6c1460d95ab76e95726
+    Receive the output: 3235e70f27c192ae7fd3376ee1cf4eea2db30df9
 
 ## 12. Checkout to base commit hash and repeat the steps 3 to 5:
-    git checkout b060894dcff216094743904f8a71228b21a093ed
+    git checkout 3235e70f27c192ae7fd3376ee1cf4eea2db30df9
 
 
