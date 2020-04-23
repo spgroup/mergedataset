@@ -1,5 +1,5 @@
  ## 1. Clone the project 
-    git clone https://github.com/apache/storm
+    git clone https://github.com/apache/storm.git
 
 ## 2. Checkout to merge the commit hash
     git checkout bd1f5c54752f67b484a83c26667331234234d3a3
