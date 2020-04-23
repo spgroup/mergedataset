@@ -1,5 +1,5 @@
  ## 1. Clone the project 
-    git clone https://github.com/Atmosphere/atmosphere
+    git clone https://github.com/Atmosphere/atmosphere.git
 
 ## 2. Checkout to merge the commit hash
     git checkout ffc0c6e274094c6423e29d1c45bab1593b8fac7d
