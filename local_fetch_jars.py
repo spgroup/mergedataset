@@ -41,14 +41,14 @@ def create_final_output_file_object(outputPath, contents):
 
 def format_output(values, merge, left, right, base):
     jars_available = "false"
-    if (merge != "" and base != "" and (left != "" or right != "")):
-        jars_available = "merge-conflict"
+    if (merge != "" and base != "" and (left != "" or right != "")  and values[1] == "69ff2669eec265e25721dbc27cb00f6c381d0b41"):
+        jars_available = "true"
 
     return values[0]+","+jars_available+","+values[1]+","+values[2]+","+values[3]+","+values[4]+","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+base+","+left+","+right+","+merge+","+values[9]+","+values[10]+","+values[11]+"\n"
 
 def format_output_object(values, merge, left, right, base):
     jars_available = "false"
-    if (merge != "" and base != "" and (left != "" or right != "")):
+    if (merge != "" and base != "" and (left != "" or right != "") and values[1] == "69ff2669eec265e25721dbc27cb00f6c381d0b41\n"):
         jars_available = "true"
 
     return [values[0], jars_available, values[1], values[2], values[3], values[4], values[5], values[6].replace("|",","), values[7], values[8], base, left, right, merge, values[9], values[10], values[11]]
