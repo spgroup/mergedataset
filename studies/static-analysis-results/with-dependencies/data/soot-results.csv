@@ -1,0 +1,14 @@
+project;class;method;merge commit;left right dataflow;right left dataflow;left right tainted;right left tainted;left right svfa;right left svfa;confluence
+elasticsearch-river-mongodb;org.elasticsearch.river.mongodb.MongoDBRiverDefinition;parseSettings(String, String, RiverSettings, ScriptService);3d4f99516ba3177f7d88a1f600923138a8b77cc8;false;false;false;false;timeout;timeout;false
+elasticsearch-river-mongodb;org.elasticsearch.river.mongodb.Slurper;assignCollections();3d4f99516ba3177f7d88a1f600923138a8b77cc8;false;false;false;false;timeout;timeout;false
+fitnesse;fitnesse.testsystems.slim.tables.SlimTableFactoryTest;setUp();4d9ba9d221d879507440feb084fa7521b95111ec;false;false;false;false;false;false;false
+fitnesse;fitnesse.testsystems.slim.tables.SlimTableFactory;SlimTableFactory();4d9ba9d221d879507440feb084fa7521b95111ec;false;false;false;false;false;false;false
+MPAndroidChart;com.xxmassdeveloper.mpchartexample.fragments.SimpleFragment;generateScatterData(int, float, int);af114d180da6ec5633d32c701ff5467f7629fcf3;false;false;false;false;false;false;false
+MPAndroidChart;com.xxmassdeveloper.mpchartexample.ScatterChartActivity;onProgressChanged(SeekBar, int, boolean);af114d180da6ec5633d32c701ff5467f7629fcf3;false;false;false;false;false;false;false
+MPAndroidChart;com.xxmassdeveloper.mpchartexample.ScatterChartActivity;onCreate(Bundle);af114d180da6ec5633d32c701ff5467f7629fcf3;false;false;false;false;false;false;false
+MPAndroidChart;com.github.mikephil.charting.renderer.LineChartRenderer;drawData(Canvas);9531ba69895cd64fce48038ffd8df2543eeea1d2;false;false;false;false;false;false;false
+MPAndroidChart;com.github.mikephil.charting.renderer.PieChartRenderer;drawData(Canvas);9531ba69895cd64fce48038ffd8df2543eeea1d2;false;false;false;false;false;false;false
+netty;org.jboss.netty.handler.codec.frame.LengthFieldBasedFrameDecoder;decode(ChannelHandlerContext, Channel, ChannelBuffer);193acdb36cd3da9bfc62dd69c4208dff3f0a2b1b;false;false;false;false;false;false;false
+OpenTripPlanner;org.opentripplanner.routing.spt.MultiShortestPathTree;dominates(State, State);4c506dce43775704919d084f0acfba86d251bf4a;false;false;false;false;timeout;timeout;false
+webbit;org.webbitserver.netty.WebSocketClient;adjustPipelineToWebSocket(ChannelHandlerContext, MessageEvent, ChannelHandler, ChannelHandler);74d2d2b87704d003acacb34e4ca8fb5f897b938f;false;false;false;false;false;false;false
+spring-boot;org.springframework.boot.context.embedded.undertow.UndertowEmbeddedServletContainerFactory;createDeploymentManager(ServletContextInitializer);ea8107b6a53fa60b5f23b33e1b6d2e88bb60133c;false;false;false;false;timeout;timeout;false
