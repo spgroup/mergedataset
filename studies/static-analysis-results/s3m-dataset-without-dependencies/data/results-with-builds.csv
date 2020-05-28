@@ -1,0 +1,5 @@
+project;merge commit;className;method;left modifications;left deletions;right modifications;right deletions
+resty-gwt;867b917c43c32acbdcac55767e7f04334006c866;org.fusesource.restygwt.rebind.DirectRestServiceInterfaceClassCreator;getMethodCallback(JMethod);[83, 84, 85];[];[86, 87, 88, 89, 90, 91];[]
+editorconfig-netbeans;53d7a09368b0bfb39534f31bf67dbc9986da85d5;com.welovecoding.netbeans.plugin.editorconfig.listener.EditorConfigProcessor;applyEditorConfigRules(DataObject);[113];[];[96, 87, 120, 121];[]
+closure-compiler;96e918311f265bdd989e10c331fe014c812f4f6b;com.google.javascript.jscomp.CommandLineRunner;initConfigFromFlags(String[], PrintStream, PrintStream);[1024, 993, 1025, 1027, 1028, 1029, 1030, 1031, 1000, 1033, 973, 1012, 985, 1018, 1086, 1022, 991, 1023];[];[979, 1064, 989];[]
+pushy;58901c846e4f0874977c5aabbc34bcb4de3670e0;com.relayrides.pushy.apns.PushManager;handleConnectionClosure(ApnsConnection<T>);[520, 510];[];[515, 500, 502, 503];[]
