@@ -1,0 +1,20 @@
+project;class;method;merge commit;left right dataflow;right left dataflow;left right tainted;right left tainted;left right svfa;right left svfa;confluence
+retrofit;retrofit.RequestBuilder;build();71f622ce51031b152a0be6ad5facfb27a654bf5a;false;false;false;false;false;false;false
+druid;com.metamx.druid.loading.S3SegmentPusher;push(File, DataSegment);05168808c278c080c59c19e858d9471b316cd1f5;false;false;false;false;timeout;timeout;false
+Activiti;org.activiti.engine.impl.bpmn.behavior.UserTaskActivityBehavior;execute(ActivityExecution);bf46684ba62f5883673ea8fb0a14aecfe0aedea2;false;false;false;false;false;false;false
+Activiti;org.activiti.engine.impl.persistence.entity.DeploymentEntityManager;deleteDeployment(String, boolean);50d8e43eb5917c63abfbcdec1e68e510943f325a;false;false;false;false;false;false;false
+hector;me.prettyprint.cassandra.connection.client.HThriftClient;open();a33a46506656a39d1b0f7780973905665d3b6145;true;false;true;false;true;true;false
+hector;me.prettyprint.cassandra.connection.client.HSaslThriftClient;open();0588608e7a2bdf974c985ff546207104f672bf6c;false;false;false;false;false;false;false
+hector;me.prettyprint.cassandra.connection.HConnectionManager;operateWithFailover(Operation<?>);213f7887ea70eabdf0705cf8454de29af89e8c38;false;false;false;false;false;false;false
+jenkins;jenkins.slaves.DefaultJnlpSlaveReceiver;handle(String, JnlpSlaveHandshake);48b2b951dfb3438999ceda330093cac82b857ce6;false;false;false;false;false;false;false
+jsoup;org.jsoup.nodes.TextNode;outerHtmlHead(StringBuilder, int, Document.OutputSettings);a44e18aa3c1fcd25a68a5965f9490d8f7d026509;false;false;false;false;false;false;false
+jsoup;org.jsoup.helper.HttpConnection;execute(Connection.Request, Response);3f7d2c71dbbbb289c684f339874eed8ac2747fa0;false;false;false;false;false;false;false
+jsoup;org.jsoup.helper.HttpConnection;execute(Connection.Request, Response);a8b6982de98ff76ef254031d7152fff57f6bf941;false;false;false;false;false;false;false
+logback;ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase;start();542843fd04a793fb9e0eea0c84d199e66d7c15af;false;true;false;true;false;true;false
+okhttp;com.squareup.okhttp.internal.bytes.GzipSource;consumeHeader(Deadline);1151c9853ccc3c9c3211c613b9b845b925f8c6a6;false;false;false;false;false;false;false
+orientdb;com.orientechnologies.orient.core.Orient;startup();a5ce3bcc0a1d196745c575ad6602019f7a6b86f8;false;false;false;false;timeout;timeout;false
+alluxio;tachyon.hadoop.HdfsFileInputStream;HdfsFileInputStream(TachyonFS, int, Path, Configuration, int);dafe76c90024a915224264b4862b33f40cb8478c;false;false;false;false;false;false;false
+titan;com.thinkaurelius.titan.graphdb.database.serialize.SerializerInitialization;initialize(Serializer);387c16ea05ef9fa312f37139228d2bbf61455ff4;false;false;false;false;false;false;false
+RxJava;rx.internal.operators.OperatorMulticast;connect(Action1<?superSubscription>);a40a4130edcdadc2340da5787ca30353018173f2;false;false;false;false;false;false;false
+SimianArmy;com.netflix.simianarmy.basic.BasicSimianArmyContext;BasicSimianArmyContext(String);c39c19bc6b9231601f6bc7358e638a99adf37e0d;false;false;false;false;false;false;false
+SimianArmy;com.netflix.simianarmy.basic.janitor.BasicJanitorMonkeyContext;getInstanceJanitor();345ad9513aafff397050d613fa87ad06ddffe99d;false;false;false;false;false;false;false

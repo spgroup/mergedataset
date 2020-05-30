@@ -1,0 +1,6 @@
+ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase,sink,45
+ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase,source,52
+ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase,source,53
+ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase,source,54
+ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase,source,55
+ch.qos.logback.core.rolling.TimeBasedFileNamingAndTriggeringPolicyBase,source,56
