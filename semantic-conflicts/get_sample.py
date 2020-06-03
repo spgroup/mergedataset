@@ -2,15 +2,14 @@ import sys
 import os
 import csv
 
-#outputPath = sys.argv[1]
-#merge_scenarios_file = sys.argv[2]
-
-def fetchJars():#outputPath, merge_scenarios_file):
+def fetchJars():
     outputPath = os.getcwd()
+    merge_scenarios_directory = outputPath.split("semantic-conflicts")[0]
     merge_scenarios_file = "results-only.csv"
 
     print("Starting getting jars...")
     parsedOutput = read_output(merge_scenarios_file)
+    print(len(parsedOutput))
     new_output = ""
     # download the releases for the project moving them to the output directories
     for key in parsedOutput:
@@ -18,16 +17,20 @@ def fetchJars():#outputPath, merge_scenarios_file):
         try:
             values = parsedOutput[key].split(",")
             commitSHA = values[1]
-            release = get_local_jars_for_commit(outputPath, commitSHA, "original")
-            base = get_all_jars_for_revision(release, "base")
-            left = get_all_jars_for_revision(release, "left")
-            right = get_all_jars_for_revision(release, "right")
-            merge = get_all_jars_for_revision(release, "merge")
-            new_output += format_output(values, merge, left, right, base)
+            new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "original", values)
+            new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "transformed", values)
         except Exception as e:
             print(key)
             print(e)
     create_final_output_file(outputPath, new_output)
+
+def get_version_for_commit(outputPath, commitSHA, version, values):
+    release = get_local_jars_for_commit(outputPath, commitSHA, version)
+    base = get_all_jars_for_revision(release, "base")
+    left = get_all_jars_for_revision(release, "left")
+    right = get_all_jars_for_revision(release, "right")
+    merge = get_all_jars_for_revision(release, "merge")
+    return format_output(values, merge, left, right, base)
 
 def create_final_output_file(outputPath, contents):
    with open(outputPath + "/results_semantic_study.csv", 'w') as outputFile:
@@ -40,18 +43,11 @@ def create_final_output_file_object(outputPath, contents):
     employee_writer.writerow(contents)
 
 def format_output(values, merge, left, right, base):
-    jars_available = "false"
-    if (merge != "" and base != "" and (left != "" or right != "")  and values[1] == "69ff2669eec265e25721dbc27cb00f6c381d0b41"):
-        jars_available = "true"
+    jars_available = "true"
+    if (merge == "" and base == "" and (left == "" or right == "")):
+        jars_available = "false"
 
     return values[0]+","+jars_available+","+values[1]+","+values[2]+","+values[3]+","+values[4]+","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+base+","+left+","+right+","+merge+","+values[9]+","+values[10]+","+values[11]+"\n"
-
-def format_output_object(values, merge, left, right, base):
-    jars_available = "false"
-    if (merge != "" and base != "" and (left != "" or right != "") and values[1] == "69ff2669eec265e25721dbc27cb00f6c381d0b41\n"):
-        jars_available = "true"
-
-    return [values[0], jars_available, values[1], values[2], values[3], values[4], values[5], values[6].replace("|",","), values[7], values[8], base, left, right, merge, values[9], values[10], values[11]]
 
 def read_output(outputPath):
     try:
@@ -69,7 +65,7 @@ def parse_output(lines):
     for line in lines[1:]:
         cells = line.split(",")
         if (len (cells) > 1):
-            result[cells[1]+"-"+cells[5]] = line
+            result[cells[1]+"-"+cells[6]] = line
     return result
 
 def get_local_jars(path, directory):
