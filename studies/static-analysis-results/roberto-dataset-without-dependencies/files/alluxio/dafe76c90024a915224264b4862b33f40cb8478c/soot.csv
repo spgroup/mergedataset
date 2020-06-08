@@ -1,6 +1,0 @@
-tachyon.hadoop.HdfsFileInputStream,sink,44
-tachyon.hadoop.HdfsFileInputStream,sink,45
-tachyon.hadoop.HdfsFileInputStream,source,52
-tachyon.hadoop.HdfsFileInputStream,source,53
-tachyon.hadoop.HdfsFileInputStream,source,56
-tachyon.hadoop.HdfsFileInputStream,source,58
