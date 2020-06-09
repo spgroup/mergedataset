@@ -1,6 +1,0 @@
-com.metamx.druid.loading.S3SegmentPusher,source,66
-com.metamx.druid.loading.S3SegmentPusher,source,118
-com.metamx.druid.loading.S3SegmentPusher,source,139
-com.metamx.druid.loading.S3SegmentPusher,source,110
-com.metamx.druid.loading.S3SegmentPusher,sink,105
-com.metamx.druid.loading.S3SegmentPusher,sink,125
