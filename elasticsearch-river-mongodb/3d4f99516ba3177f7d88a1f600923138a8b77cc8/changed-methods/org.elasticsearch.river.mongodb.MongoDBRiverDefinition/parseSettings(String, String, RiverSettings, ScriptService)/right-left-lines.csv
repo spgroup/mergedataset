@@ -1,0 +1,13 @@
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,source,714
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,source,699
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,source,683
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,source,717
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,source,686
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,source,703
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,576
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,515
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,582
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,617
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,490
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,635
+org.elasticsearch.river.mongodb.MongoDBRiverDefinition,sink,670
