@@ -10,7 +10,7 @@ The scenarios are grouped by projects, which may have different merge scenarios.
 3. A README file with guidelines to build each commit locally.
 
 ## Semantic Conflicts - CVS File
-The file [sample-semantic-conflicts.csv](https://github.com/leusonmario/mergedataset/blob/master/semantic-conflicts/sample-semantic-conflicts.csv) groups the merge scenarios that are part of our dataset. In this file, you can find:
+The file [sample-semantic-conflicts.csv](https://github.com/spgroup/mergedataset/blob/master/semantic-conflicts/sample-semantic-conflicts.csv) groups the merge scenarios that are part of our dataset. In this file, you can find:
 1. Sample: the original study that identified the semantic conflict
 2. Semantic conflict: a boolean value that indicates the occurrence of a semantic conflict
 3. Commit: merge commit associated with the merge scenario
