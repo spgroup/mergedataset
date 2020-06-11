@@ -1,0 +1,5 @@
+org.elasticsearch.river.mongodb.Indexer,source,176
+org.elasticsearch.river.mongodb.Indexer,sink,161
+org.elasticsearch.river.mongodb.Indexer,sink,198
+org.elasticsearch.river.mongodb.Indexer,sink,201
+org.elasticsearch.river.mongodb.Indexer,sink,189

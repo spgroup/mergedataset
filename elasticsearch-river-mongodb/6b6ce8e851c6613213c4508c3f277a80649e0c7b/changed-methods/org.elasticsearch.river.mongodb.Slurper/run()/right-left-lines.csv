@@ -1,0 +1,3 @@
+org.elasticsearch.river.mongodb.Slurper,source,105
+org.elasticsearch.river.mongodb.Slurper,sink,145
+org.elasticsearch.river.mongodb.Slurper,sink,148
