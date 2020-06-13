@@ -1,7 +1,7 @@
 1. Clone the project:  
    `git clone https://github.com/voldemort/voldemort/`
 2. Checkout to merge commit hash:  
-   `git checkout b30fdfebe30c9b6e37b9fbc3fec0ff74cd19f997`
+   `git checkout 4cc1c145819030c8e2baffe4c92383de14b8d880`
 3. Substitute the buildscript at the build.gradle to:
 ```
 buildscript {
