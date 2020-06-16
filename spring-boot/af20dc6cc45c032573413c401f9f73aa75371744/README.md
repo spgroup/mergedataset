@@ -18,7 +18,7 @@
             <descriptorRef>jar-with-dependencies</descriptorRef> 
         </descriptorRefs> 
         </configuration> 
- </plugin>
+    </plugin>
 ``` 
 
 ## 4. Edit the _.travis.yml_ add the line 
@@ -26,7 +26,7 @@
     - mvn clean compile assembly:single
 ```
 
-## 5. Edit the spring-boot\spring-boot-dependencies\pom.xml add the plugin
+## 5. Edit the **spring-boot\spring-boot-dependencies\pom.xml** add the plugin
 ```xml
  <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
