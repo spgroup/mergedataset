@@ -1,0 +1,4 @@
+org.apache.storm.kafka.spout.KafkaSpoutConfig,sink,515
+org.apache.storm.kafka.spout.KafkaSpoutConfig,sink,516
+org.apache.storm.kafka.spout.KafkaSpoutConfig,sink,521
+org.apache.storm.kafka.spout.KafkaSpoutConfig,sink,522
