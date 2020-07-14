@@ -1,0 +1,5 @@
+org.elasticsearch.index.query.support.NestedInnerQueryParseSupport,sink,193
+org.elasticsearch.index.query.support.NestedInnerQueryParseSupport,sink,195
+org.elasticsearch.index.query.support.NestedInnerQueryParseSupport,sink,197
+org.elasticsearch.index.query.support.NestedInnerQueryParseSupport,sink,200
+org.elasticsearch.index.query.support.NestedInnerQueryParseSupport,source,199

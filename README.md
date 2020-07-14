@@ -19,3 +19,12 @@ The file [sample-semantic-conflicts.csv](https://github.com/spgroup/mergedataset
 6. Build manager: assistant used to manage the project dependencies
 7. Original version: link for the jar files generated from the original project version
 8. Transformed version: link for the jar files generated from the transformed project version
+
+
+## Build Union Script
+
+Some build files are larger than 100 MB, not supported by github, so they were separated using split, to union them, run the build script located at the root, with the following command:
+
+```
+./build.sh
+```
