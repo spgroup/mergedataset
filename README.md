@@ -23,8 +23,8 @@ The file [sample-semantic-conflicts.csv](https://github.com/spgroup/mergedataset
 
 ## Build Union Script
 
-Some build files are larger than 100 MB, not supported by github, so they were separated using split, to union them, run the build script located at the root, with the following command:
+Some build files are larger than 100 MB, not supported by Github, so they were separated using split, to union them, run the script located at the root with the following command:
 
 ```
-./build.sh
+./prepareDataset.sh
 ```
