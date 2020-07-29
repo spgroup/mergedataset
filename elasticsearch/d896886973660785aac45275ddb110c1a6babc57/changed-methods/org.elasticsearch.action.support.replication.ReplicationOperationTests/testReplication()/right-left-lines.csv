@@ -1,0 +1,6 @@
+org.elasticsearch.action.support.replication.ReplicationOperationTests,source,106
+org.elasticsearch.action.support.replication.ReplicationOperationTests,source,108
+org.elasticsearch.action.support.replication.ReplicationOperationTests,source,125
+org.elasticsearch.action.support.replication.ReplicationOperationTests,source,126
+org.elasticsearch.action.support.replication.ReplicationOperationTests,sink,116
+org.elasticsearch.action.support.replication.ReplicationOperationTests,sink,103

@@ -1,0 +1,6 @@
+org.elasticsearch.rest.action.cat.RestIndicesAction,sink,144
+org.elasticsearch.rest.action.cat.RestIndicesAction,sink,147
+org.elasticsearch.rest.action.cat.RestIndicesAction,sink,150
+org.elasticsearch.rest.action.cat.RestIndicesAction,sink,153
+org.elasticsearch.rest.action.cat.RestIndicesAction,sink,138
+org.elasticsearch.rest.action.cat.RestIndicesAction,sink,141

@@ -1,0 +1,6 @@
+org.elasticsearch.action.update.TransportUpdateAction,source,224
+org.elasticsearch.action.update.TransportUpdateAction,source,185
+org.elasticsearch.action.update.TransportUpdateAction,source,254
+org.elasticsearch.action.update.TransportUpdateAction,sink,192
+org.elasticsearch.action.update.TransportUpdateAction,sink,249
+org.elasticsearch.action.update.TransportUpdateAction,sink,250

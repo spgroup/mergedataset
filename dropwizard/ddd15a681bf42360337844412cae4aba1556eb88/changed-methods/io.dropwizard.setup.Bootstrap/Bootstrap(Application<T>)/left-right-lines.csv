@@ -1,0 +1,5 @@
+io.dropwizard.setup.Bootstrap,sink,71
+io.dropwizard.setup.Bootstrap,source,65
+io.dropwizard.setup.Bootstrap,source,67
+io.dropwizard.setup.Bootstrap,source,68
+io.dropwizard.setup.Bootstrap,source,69
