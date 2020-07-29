@@ -1,0 +1,7 @@
+org.elasticsearch.common.settings.ClusterSettings,source,264
+org.elasticsearch.common.settings.ClusterSettings,source,265
+org.elasticsearch.common.settings.ClusterSettings,sink,256
+org.elasticsearch.common.settings.ClusterSettings,sink,257
+org.elasticsearch.common.settings.ClusterSettings,sink,258
+org.elasticsearch.common.settings.ClusterSettings,sink,254
+org.elasticsearch.common.settings.ClusterSettings,sink,255

@@ -1,0 +1,12 @@
+org.elasticsearch.river.mongodb.Slurper,sink,752
+org.elasticsearch.river.mongodb.Slurper,sink,747
+org.elasticsearch.river.mongodb.Slurper,sink,748
+org.elasticsearch.river.mongodb.Slurper,sink,751
+org.elasticsearch.river.mongodb.Slurper,source,736
+org.elasticsearch.river.mongodb.Slurper,source,737
+org.elasticsearch.river.mongodb.Slurper,source,738
+org.elasticsearch.river.mongodb.Slurper,source,739
+org.elasticsearch.river.mongodb.Slurper,source,740
+org.elasticsearch.river.mongodb.Slurper,source,741
+org.elasticsearch.river.mongodb.Slurper,source,742
+org.elasticsearch.river.mongodb.Slurper,source,743
