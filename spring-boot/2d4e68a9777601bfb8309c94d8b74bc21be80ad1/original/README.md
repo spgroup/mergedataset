@@ -1,7 +1,7 @@
  ## 1. Clone the project 
     git clone https://github.com/spring-projects/spring-boot.git
 
-## 2. Checkout to merge the commit hash
+## 2. Open the project and do checkout to merge the commit hash
     git checkout -f 2d4e68a9777601bfb8309c94d8b74bc21be80ad1
 
 ## 3. Open the parent directory (spring-boot/spring-boot-parent/pom.xml) and change all the urls:
@@ -9,9 +9,9 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot/pom.xml** and add the code into tag **<plugins>**:
+## 4. Open the pom file in **spring-boot/spring-boot/pom.xml** and add the code before the tag <plugins>:
 ```xml
-     <plugin>
+    <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
         <configuration> 
         <archive> 
@@ -26,7 +26,7 @@
     </plugin>
 ```
 
-## 5. Inside the folder  **spring-boot** run the command:
+## 5. Inside the folder **spring-boot/spring-boot** run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 6. Check the content folder: 
