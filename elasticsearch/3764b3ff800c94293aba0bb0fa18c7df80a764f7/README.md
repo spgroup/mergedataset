@@ -13,3 +13,4 @@
       `export PATH=$PATH:/opt/gradle/gradle-2.8/bin`
 5. With gradle on version 2.8, execute:
    `gradle assemble testClasses`
+6. Execute the command `find . -name "*.jar"` to list the generated jars and copy them to the destination folder.

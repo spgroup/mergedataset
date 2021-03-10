@@ -1,4 +1,4 @@
-1. Clone the project:  
+1. Clone the project:
    `git clone https://github.com/elastic/elasticsearch`
 2. Checkout to merge commit hash:  
    `git checkout 0404db65e3497452886173957729c8e82cfd4a03`
@@ -12,4 +12,5 @@
    * Configure your path so that you can execute the gradle command
       `export PATH=$PATH:/opt/gradle/gradle-2.8/bin`
 5. With gradle on version 2.8, execute:
-   `gradle assemble testClasses`
+  `gradle assemble testClasses`
+6. Execute the command `find . -name "*.jar"` to list the generated jars and copy them to the destination folder.
