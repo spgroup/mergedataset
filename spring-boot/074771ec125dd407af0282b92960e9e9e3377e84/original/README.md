@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot/pom.xml** and add the code before the tag <plugins>:
+## 4. Open the pom file in spring-boot/spring-boot/pom.xml and add the code before the tag <plugins>:
 ```xml
     <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
@@ -26,7 +26,7 @@
     </plugin>
 ```
 
-## 5. Inside the folder **spring-boot/spring-boot** run the command:
+## 5. Inside the folder spring-boot/spring-boot run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 6. Check the content folder: 
@@ -42,7 +42,7 @@
 ## 9. Checkout to right commit hash and repeat steps 3 to 6, chance the step 5 for 10:
     git checkout -f cd62596e8282b7a91490a7efe527f6deed7e3baa
 
-## 10. Inside the folder  **spring-boot** run the command:
+## 10. Inside the folder  spring-boot run the command:
     mvn clean compile package -Dmaven.compiler.failOnError=false assembly:single
 
 ## 11. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)

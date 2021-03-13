@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot/pom.xml** and add the code into tag **<plugins>**:
+## 4. Open the pom file in spring-boot/spring-boot/pom.xml and add the code into tag <plugins>:
 ```xml
      <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
@@ -36,7 +36,7 @@
 
 ## 6. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and /spring-boot/src/main/java/org/springframework/boot/web/servlet/view. Comment the import: import org.springframework.web.servlet.view.AbstractUrlBasedView;. Comment all the method AbstractUrlBasedView buildView in both classes
 
-## 7. Inside the folder  **spring-boot** run the command:
+## 7. Inside the folder  spring-boot run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 8. Check the content folder: 

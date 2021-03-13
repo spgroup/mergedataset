@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot-autoconfigure/pom.xml** and add the code before the tag  </project>:
+## 4. Open the pom file in spring-boot/spring-boot-autoconfigure/pom.xml and add the code before the tag  </project>:
 ```xml
     <build>
         <plugins>
@@ -37,7 +37,7 @@
     }
 ```
 
-## 6. Inside the folder  **spring-boot-autoconfigure** run the command:
+## 6. Inside the folder  spring-boot-autoconfigure run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 7. Check the content folder: 

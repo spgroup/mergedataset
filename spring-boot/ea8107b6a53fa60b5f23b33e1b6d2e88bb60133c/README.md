@@ -2,7 +2,7 @@
    `git clone https://github.com/spring-projects/spring-boot.git`
 2. Checkout to merge commit hash:  
    `git checkout ea8107b6a53fa60b5f23b33e1b6d2e88bb60133c`
-3. Edit the **pom.xml** at the **spring-boot** folder of the project:
+3. Edit the pom.xml at the spring-boot folder of the project:
 
 ```maven
 <?xml version="1.0" encoding="UTF-8"?>
@@ -291,7 +291,7 @@
 </project>
 ```
 
-4. Inside the folder **spring-boot** run the command:
+4. Inside the folder spring-boot run the command:
    `mvn clean compile assembly:single`
 
    if you recive this error:
@@ -301,7 +301,7 @@
    [FATAL] Non-resolvable parent POM for org.springframework.boot:spring-boot:[unknown-version]: Could not find artifact org.springframework.boot:spring-boot-parent:pom:1.3.1.BUILD-SNAPSHOT and 'parent.relativePath' points at wrong local POM @ line 4, column 10
    ```
 
-   replace the **parent** tags for:
+   replace the parent tags for:
 
    ```
    <groupId>org.springframework.boot</groupId>
@@ -310,15 +310,15 @@
    <relativePath>../spring-boot-dependencies</relativePath>
    ```
 
-5. check the contents folder **spring-boot/target**.
-6. Identify the left and right commit hash. (**git log --pretty=%P -n 1 <merge_commit_hash>**)  
+5. check the contents folder spring-boot/target.
+6. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)  
    Run: `git log --pretty=%P -n 1 ea8107b6a53fa60b5f23b33e1b6d2e88bb60133c`.  
    Receive the output: `dd4b9b1788862933e714700aa4caa425e3fc154c 2fe08194950356f247107a256da91a3560b80fa3`
 7. Checkout to left commit hash and repeat steps 4 and 5:  
    `git checkout f01b90668be552ec5139264cda72c0924a5451e3`
 8. Checkout to right commit hash and repeat steps 4 and 5:  
    `git checkout 0f3f4b75b0e8bb386dd1618b50e7240a572e6eda`
-9. Identify the base commit hash. (**git merge-base <left_commit_hash> <right_commit_hash>**)  
+9. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)  
    Run: `git merge-base dd4b9b1788862933e714700aa4caa425e3fc154c 2fe08194950356f247107a256da91a3560b80fa3`.  
    Receive the output: `604ca524912c7a4e105746138bafc1eeedec3b50`
 10. Checkout to base commit hash and repeat steps 4 and 5:  

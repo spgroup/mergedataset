@@ -20,7 +20,7 @@
 
 ## 5. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and /spring-boot/src/main/java/org/springframework/boot/web/servlet/view. Comment the import: import org.springframework.web.servlet.view.AbstractUrlBasedView;. Comment all the method AbstractUrlBasedView buildView in both classes
 
-## 6. Inside the folder  **spring-boot** run the command:
+## 6. Inside the folder spring-boot run the command:
 ```xml
     mvn clean compile package -Dmaven.compiler.failOnError=false -DskipTests jar:test-jar
 ```
