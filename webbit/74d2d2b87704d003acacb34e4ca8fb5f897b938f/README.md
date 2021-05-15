@@ -33,6 +33,6 @@
    `git checkout 92c8b2896b3e09afe996278b9ce6f952b02c8c99`
 9. Identify the base commit hash. (**git merge-base <left_commit_hash> <right_commit_hash>**)  
    Run: `git merge-base 0d57793d92a4fd8799845c7adb356644c1128a6f 92c8b2896b3e09afe996278b9ce6f952b02c8c99`.  
-   Receive the output: `2336da1704627c236e6eca214614e748d195794d`
+   Receive the output: `2ba2b9b0403b9973d26fbc7c2be95fb993d318a2`
 10. Checkout to base commit hash and repeat steps 3-5:  
     `git checkout 2ba2b9b0403b9973d26fbc7c2be95fb993d318a2`
