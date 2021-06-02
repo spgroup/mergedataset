@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in spring-boot/spring-boot-autoconfigure/pom.xml and add the code before the tag  </project>:
+## 4. Open the pom file in spring-boot/spring-boot-autoconfigure/pom.xml and add the code before the tag project:
 ```xml
     <build>
         <plugins>
@@ -37,25 +37,36 @@
     }
 ```
 
-## 6. Inside the folder  spring-boot-autoconfigure run the command:
+## 6. Open the dependencies directory (spring-boot/spring-boot-dependencies/pom.xml) and change all the urls:
+```xml
+    http://repo.spring.io change to https://repo.spring.io
+```
+
+## 7. In the file (spring-boot/spring-boot-dependencies/pom.xml), change the versions: spring.version from 4.2.0.BUILD-SNAPSHOT to 4.2.10.BUILD-SNAPSHOT and spring-batch.version from 3.0.4.BUILD-SNAPSHOT to 3.0.4.RELEASE
+```xml
+<spring.version>4.2.10.BUILD-SNAPSHOT</spring.version>
+<spring-batch.version>3.0.4.RELEASE</spring-batch.version>
+```
+
+## 8. Inside the folder spring-boot-autoconfigure run the command:
     mvn clean compile -DskipTests assembly:single
 
-## 7. Check the content folder: 
+## 9. Check the content folder: 
     spring-boot/spring-boot-autoconfigure/target
 
-## 8. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)
+## 10. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)
     Run: git log --pretty=%P -n 1 fdd3f12ee0f92ac18844c08bf71df39feebb6673 
     Receive the output: 734f5c39f7d55d6b55c92e1dc35ff1bd50b3cae5 4f988d2aeca5433bbba7fef3b20d9977691fc4c0 
 
-## 9. Checkout to left commit hash and repeat steps 3 to 7:
+## 11. Checkout to left commit hash and repeat steps 3 to 9:
     git checkout -f 734f5c39f7d55d6b55c92e1dc35ff1bd50b3cae5
 
-## 10. Checkout to right commit hash and repeat steps 3 to 7:
+## 12. Checkout to right commit hash and repeat steps 3 to 9:
     git checkout -f 4f988d2aeca5433bbba7fef3b20d9977691fc4c0
 
-## 11. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
+## 13. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
     Run: git merge-base 734f5c39f7d55d6b55c92e1dc35ff1bd50b3cae5 4f988d2aeca5433bbba7fef3b20d9977691fc4c0 
     Receive the output: 2d7c0c2f006244c5196d3ff24cfa11a421bf8b48  
 
-## 12. Checkout to base commit hash and repeat steps 3 to 7:
+## 14. Checkout to base commit hash and repeat steps 3 to 9:
     git checkout -f 2d7c0c2f006244c5196d3ff24cfa11a421bf8b48
