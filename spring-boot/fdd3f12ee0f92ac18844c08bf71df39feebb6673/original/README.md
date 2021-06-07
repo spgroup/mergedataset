@@ -42,10 +42,24 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 7. In the file (spring-boot/spring-boot-dependencies/pom.xml), change the versions: spring.version from 4.2.0.BUILD-SNAPSHOT to 4.2.10.BUILD-SNAPSHOT and spring-batch.version from 3.0.4.BUILD-SNAPSHOT to 3.0.4.RELEASE
+## 7. In the file (spring-boot/spring-boot-dependencies/pom.xml).
+
+## 7.1 Update the following dependency version for 1.2.4.RELEASE:
 ```xml
-<spring.version>4.2.10.BUILD-SNAPSHOT</spring.version>
-<spring-batch.version>3.0.4.RELEASE</spring-batch.version>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot</artifactId>
+        <version>1.2.4.BUILD-SNAPSHOT</version>
+	</dependency>
+```
+
+## 7.2 Update the following dependency version for 1.2.4.RELEASE:
+```xml
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-configuration-processor</artifactId>
+        <version>1.2.4.BUILD-SNAPSHOT</version>
+    </dependency>
 ```
 
 ## 8. Inside the folder spring-boot-autoconfigure run the command:
