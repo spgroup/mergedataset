@@ -34,7 +34,7 @@
     </dependency>
 ```
 
-## 6. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and comment the import: import org.springframework.web.reactive.result.view.AbstractUrlBasedView; (line 22). Open the file /spring-boot/src/main/java/org/springframework/boot/web/servlet/view, comment the import: import org.springframework.web.servlet.view.AbstractUrlBasedView; (line 24). Comment all the method AbstractUrlBasedView buildView in both classes (lines 70 to 76).
+## 6. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and /spring-boot/src/main/java/org/springframework/boot/web/servlet/view. Comment the import: import org.springframework.web.reactive.result.view.AbstractUrlBasedView; (line 22) and the import: import org.springframework.web.servlet.view.AbstractUrlBasedView; (line 24) on the respective files. Comment all the method AbstractUrlBasedView buildView in both classes (lines 70 to 76).
 
 ## 7. Inside the folder spring-boot/spring-boot run the command:
     mvn clean compile -DskipTests assembly:single
