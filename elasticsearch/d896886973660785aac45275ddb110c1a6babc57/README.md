@@ -15,7 +15,7 @@
     exclude 'META-INF/*.RSA', 'META-INF/*.SF', 'META-INF/*.DSA'
     }
     with jar
-   }```
+   }
 4. Inside the folder **core** run the command:
    `gradle clean fatjar`
 5. check the contents folder **elasticsearch/core/build/distributions**.
