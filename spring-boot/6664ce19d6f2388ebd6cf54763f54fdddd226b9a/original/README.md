@@ -36,6 +36,8 @@
 
 ## 6. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and /spring-boot/src/main/java/org/springframework/boot/web/servlet/view. Comment the import: import org.springframework.web.servlet.view.AbstractUrlBasedView;. Comment all the method AbstractUrlBasedView buildView in both classes
 
+Next move the class spring-boot/spring-boot/src/test/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java to the new location spring-boot/spring-boot/src/main/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java
+
 ## 7. Inside the folder  **spring-boot** run the command:
     mvn clean compile -DskipTests assembly:single
 
