@@ -12,6 +12,10 @@ cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/base/build* > 
 cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/left/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/left/buildFinal.jar
 cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/merge/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/merge/buildFinal.jar
 cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/right/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/original/right/buildFinal.jar
+cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/base/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/base/buildFinal.jar
+cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/left/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/left/buildFinal.jar
+cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/merge/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/merge/buildFinal.jar
+cat spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/right/build* > spring-boot/c93ea54ea3e08eaa2a17640d5d2b3e60264c1a9c/transformed/right/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/base/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/base/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/left/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/left/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/merge/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/merge/buildFinal.jar
