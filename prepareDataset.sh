@@ -16,5 +16,7 @@ cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/base/build* > 
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/left/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/left/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/merge/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/merge/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/right/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/original/right/buildFinal.jar
-
-
+cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/base/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/base/buildFinal.jar
+cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/left/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/left/buildFinal.jar
+cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/merge/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/merge/buildFinal.jar
+cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/right/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/right/buildFinal.jar
