@@ -4,7 +4,7 @@
 ## 2. Checkout to merge the commit hash
     git checkout 6b6ce8e851c6613213c4508c3f277a80649e0c7b
 
-# 3. Replace the plugin with artifactId maven-assembly-plugin in the build tag on the pom.xml at the root of the project for:
+# 3. Edit the build tag on the _pom.xml_ at the root of the project for adding the plugin
 
 ```xml
 <plugin>
