@@ -1,0 +1,1 @@
+As a target class involved in this scenario extends another, an error was caused by applying the testability transformations. To fix the error, apply all testability transformations, but manually remove the empty constructor in me.prettyprint.cassandra.connection.client.HKerberosThriftClient.
