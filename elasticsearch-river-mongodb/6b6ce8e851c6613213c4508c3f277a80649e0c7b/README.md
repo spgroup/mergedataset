@@ -35,12 +35,12 @@
 ## 7. Checkout to left commit hash and repeat steps 3, 4, and 5:
     git checkout 5d7c50df2bc6dedee4ae05c612572fe5e267a617
 
-## 10. Checkout to right commit hash and repeat steps 3, 4, and 5:
+## 8. Checkout to right commit hash and repeat steps 3, 4, and 5:
     git checkout 0fb6b4001f03b4732d4d65e78d9f262af3007ad4
 
-## 11. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
+## 9. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
     Run: git merge-base 5d7c50df2bc6dedee4ae05c612572fe5e267a617 0fb6b4001f03b4732d4d65e78d9f262af3007ad4
     Receive the output: 9e1c3852df3e69505d5aeb30d3699019de4db104
 
-## 12. Checkout to base commit hash and repeat steps 3, 4, and 5:
+## 10. Checkout to base commit hash and repeat steps 3, 4, and 5:
     git checkout 9e1c3852df3e69505d5aeb30d3699019de4db104
