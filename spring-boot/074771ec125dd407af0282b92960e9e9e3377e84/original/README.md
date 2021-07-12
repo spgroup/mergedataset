@@ -37,28 +37,30 @@
     </plugin>
 ```
 
-## 7. Inside the folder spring-boot/spring-boot run the command:
+## 7. In the file (spring-boot/spring-boot/pom.xml), if the version of spring-boot-parent is 1.2.5.BUILD-SNAPSHOT change to 1.2.5.RELEASE
+
+## 8. Inside the folder spring-boot/spring-boot run the command:
     mvn clean compile -DskipTests assembly:single
 
-## 8. Check the content folder: 
+## 9. Check the content folder: 
     spring-boot/spring-boot/target
 
-## 9. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)
+## 10. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)
     Run: git log --pretty=%P -n 1 074771ec125dd407af0282b92960e9e9e3377e84
     Receive the output: d30dd1fa98f2ab84926ac1c40f6a4a44c39e2f55 cd62596e8282b7a91490a7efe527f6deed7e3baa
 
-## 10. Checkout to left commit hash and repeat steps 3 to 8:
+## 11. Checkout to left commit hash and repeat steps 3 to 9:
     git checkout -f d30dd1fa98f2ab84926ac1c40f6a4a44c39e2f55
 
-## 11. Checkout to right commit hash and repeat steps 3 to 8, change the step 7 for 12:
+## 12. Checkout to right commit hash and repeat steps 3 to 9, change the step 8 for 13:
     git checkout -f cd62596e8282b7a91490a7efe527f6deed7e3baa
 
-## 12. Inside the folder  spring-boot run the command:
+## 14. Inside the folder  spring-boot run the command:
     mvn clean compile package -Dmaven.compiler.failOnError=false assembly:single
 
-## 13. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
+## 15. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
     Run: git merge-base d30dd1fa98f2ab84926ac1c40f6a4a44c39e2f55 cd62596e8282b7a91490a7efe527f6deed7e3baa
     Receive the output: 01ba0f75718c0342276cfd7b3c269f9effe5ef56
 
-## 14. Checkout to base commit hash and repeat steps 3 to 8, change the step 7 for 12:
+## 16. Checkout to base commit hash and repeat steps 3 to 9, change the step 8 for 13:
     git checkout -f 01ba0f75718c0342276cfd7b3c269f9effe5ef56
