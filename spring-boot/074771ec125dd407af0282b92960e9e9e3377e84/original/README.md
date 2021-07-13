@@ -52,15 +52,12 @@
 ## 11. Checkout to left commit hash and repeat steps 3 to 9:
     git checkout -f d30dd1fa98f2ab84926ac1c40f6a4a44c39e2f55
 
-## 12. Checkout to right commit hash and repeat steps 3 to 9, change the step 8 for 13:
+## 12. Checkout to right commit hash and repeat steps 3 to 9:
     git checkout -f cd62596e8282b7a91490a7efe527f6deed7e3baa
 
-## 14. Inside the folder  spring-boot run the command:
-    mvn clean compile package -Dmaven.compiler.failOnError=false assembly:single
-
-## 15. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
+## 13. Identify the base commit hash. (git merge-base <left_commit_hash> <right_commit_hash>)
     Run: git merge-base d30dd1fa98f2ab84926ac1c40f6a4a44c39e2f55 cd62596e8282b7a91490a7efe527f6deed7e3baa
     Receive the output: 01ba0f75718c0342276cfd7b3c269f9effe5ef56
 
-## 16. Checkout to base commit hash and repeat steps 3 to 9, change the step 8 for 13:
+## 14. Checkout to base commit hash and repeat steps 3 to 9:
     git checkout -f 01ba0f75718c0342276cfd7b3c269f9effe5ef56
