@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot-autoconfigure/pom.xml** and add the code:
+## 4. Open the pom file in spring-boot/spring-boot-autoconfigure/pom.xml and add the code:
 ```xml
     <build>
         <plugins>
@@ -30,7 +30,7 @@
     </build>
 ```
 
-## 5. Inside the folder  **spring-boot-autoconfigure** run the command:
+## 5. Inside the folder  spring-boot-autoconfigure run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 6. Check the content folder: 
@@ -46,7 +46,7 @@
 ## 9. Checkout to right commit hash:
     git checkout -f 779537551edfa0c0bc430e0727b1277ec0a8a57e
 
-## 10. Comment or remove the dependency of **spring-boot-autoconfigure/pom.xml** and repeat the steps 3 to 6:
+## 10. Comment or remove the dependency of spring-boot-autoconfigure/pom.xml and repeat the steps 3 to 6:
 ```xml
     <dependency>
         <groupId>org.springframework.boot</groupId>
