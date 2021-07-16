@@ -9,9 +9,9 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot/pom.xml** and add the code into tag **<plugins>**:
+## 4. Open the pom file in spring-boot/spring-boot/pom.xml and add the code into tag <plugins>:
 ```xml
-     <plugin>
+    <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
         <configuration> 
         <archive> 
@@ -27,18 +27,18 @@
 ```
 ## 5. Comment the spring-boot-test-support dependency:
 ```xml
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test-support</artifactId>
-            <scope>test</scope>
-        </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-test-support</artifactId>
+        <scope>test</scope>
+    </dependency>
 ```
 
-## 6. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and /spring-boot/src/main/java/org/springframework/boot/web/servlet/view. Comment the import: import org.springframework.web.servlet.view.AbstractUrlBasedView;. Comment all the method AbstractUrlBasedView buildView in both classes
+## 6. Search the files: MustacheViewResolver.java, in paths: spring-boot/src/main/java/org/springframework/boot/web/reactive/result/view and /spring-boot/src/main/java/org/springframework/boot/web/servlet/view. Comment the import: import org.springframework.web.reactive.result.view.AbstractUrlBasedView; (line 22) and the import: import org.springframework.web.servlet.view.AbstractUrlBasedView; (line 24) on the respective files. Comment the methods AbstractUrlBasedView createUrlBasedView (lines 70 to 76) and AbstractUrlBasedView buildView (lines 70 to 76).
 
 Next move the class spring-boot/spring-boot/src/test/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java to the new location spring-boot/spring-boot/src/main/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java
 
-## 7. Inside the folder  **spring-boot** run the command:
+## 7. Inside the folder spring-boot/spring-boot run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 8. Check the content folder: 

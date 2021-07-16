@@ -16,7 +16,7 @@
     }
 ```
 
-## 5. Open the pom file in **spring-boot/spring-boot-autoconfigure/pom.xml** and add the code:
+## 5. Open the pom file in spring-boot/spring-boot-autoconfigure/pom.xml and add the code:
 ```xml
     mvn install -DskipTests jar:test-jar
 ```

@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/spring-boot-autoconfigure/pom.xml** and add the code:
+## 4. Open the pom file in spring-boot/spring-boot-autoconfigure/pom.xml and add the code:
 ```xml
     <build>
         <plugins>
@@ -30,12 +30,12 @@
     </build>
 ```
 
-## 5. Insert the annotation param in the class **CacheManagerCustomizers** in line 47 
+## 5. Insert the annotation param in the class CacheManagerCustomizers in line 47 
 ```xml
    * @param <T> the type of cache manager
 ```
 
-## 6. Inside the folder  **spring-boot-autoconfigure** run the command:
+## 6. Inside the folder  spring-boot-autoconfigure run the command:
     mvn clean compile package -Dmaven.compiler.failOnError=false -DskipTests assembly:single
 
 ## 7. Check the content folder: 
