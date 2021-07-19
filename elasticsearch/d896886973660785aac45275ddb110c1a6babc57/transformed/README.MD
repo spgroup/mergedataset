@@ -31,36 +31,36 @@
     - **org.elasticsearch.action.support.replication.ReplicationOperation**:
         - Remove repeated "public" fields appearances.
         - Remove empty constructors.
-    - **org.elasticsearch.common.settings.IndexScopedSettings.java**:
+    - **org.elasticsearch.common.settings.IndexScopedSettings**:
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
         - Remove empty constructors.
-    - **org.elasticsearch.index.IndexSettings.java**:
+    - **org.elasticsearch.index.IndexSettings**:
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
-    - **org.elasticsearch.action.DocWriteResponse.java**:
+    - **org.elasticsearch.action.DocWriteResponse**:
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
-    - **org.elasticsearch.cluster.metadata.MetaDataCreateIndexService.java**
+    - **org.elasticsearch.cluster.metadata.MetaDataCreateIndexService**
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
-    - **org.elasticsearch.action.support.replication.TransportReplicationAction.java**
+    - **org.elasticsearch.action.support.replication.TransportReplicationAction**
         - Remove repeated "public" fields appearances.
         - Remove empty constructors.
-    - **org.elasticsearch.action.admin.indices.flush.TransportShardFlushAction.java**
+    - **org.elasticsearch.action.admin.indices.flush.TransportShardFlushAction**
         - Apply transformations.
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
         - Remove empty constructors.
-    - **org\elasticsearch\action\admin\indices\refresh\TransportShardRefreshAction.java**
+    - **org\elasticsearch\action\admin\indices\refresh\TransportShardRefreshAction**
         - Apply transformations.
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
         - Remove empty constructors.
-    - **org.elasticsearch.action.support.replication.TransportWriteAction.java**
+    - **org.elasticsearch.action.support.replication.TransportWriteAction**
         - Apply transformations.
         - Remove empty constructors.
-    - **org.elasticsearch.index.engine.InternalEngine.java**
+    - **org.elasticsearch.index.engine.InternalEngine**
         - Remove empty constructors.
     - **org.elasticsearch.index.seqno.GlobalCheckpointSyncAction**
         - Apply transformations.
         - Change the getters and setters for static fields. Where you find "this" replace it with the class name.
         - Remove empty constructors.
-    - **org.elasticsearch.action.support.replication.ReplicationOperationTests.java**
+    - **org.elasticsearch.action.support.replication.ReplicationOperationTests**
         - Remove empty constructors.
     - **org.elasticsearch.action.support.replication.TransportReplicationActionTests**
         - Apply transformations.
