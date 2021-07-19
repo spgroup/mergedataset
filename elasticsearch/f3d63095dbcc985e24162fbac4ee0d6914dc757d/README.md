@@ -36,7 +36,7 @@
               </configuration>
           </execution>
       </executions>
-    </plugin>
+   </plugin>
 ```
 
 6. Create an **assembly.xml** file on the directory **elasticsearch/core/src/main/assembly** with the following content
