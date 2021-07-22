@@ -4,43 +4,73 @@
 ## 2. Checkout to merge the commit hash
     git checkout ffc0c6e274094c6423e29d1c45bab1593b8fac7d
 
-## 3. Edit the version tag the _pom.xml_ at _all the project_, searching for pom.xml at root project and remove _-SNAPSHOT_ version
-
-```xml
-<version>2.3.0-SNAPSHOT</version>
-``` 
-Change to:
-```xml
-<version>2.3.0</version>
-``` 
-## Remove the assembly module ```<module>assembly</module>```, this module, insert the tags build and go to the next step
-
-## PS.: The build should be run at each module separately, but first edit the root build file
-
-## 4. Edit the build tag (```<build> <plugins> ```  HERE ... ```</plugins> </build>```) on the _pom.xml_ at the root of the project e at all the modules add the plugin. PS.: If the _pom.xml_ file of any module does not have build tag, insert it
+## 3. Edit the build tag (```<build> <plugins> ```  HERE ... ```</plugins> </build>```) on the _pom.xml_ at the directory **atmosphere/modules/cpr**:
 
 
 ```xml
-<plugin>
-	<artifactId>maven-assembly-plugin</artifactId> 
-    <configuration> 
-    <archive> 
-    <manifest> 
-        <mainClass>fully.qualified.MainClass</mainClass> 
-    </manifest> 
-    </archive> 
-    <descriptorRefs> 
-        <descriptorRef>jar-with-dependencies</descriptorRef> 
-    </descriptorRefs> 
-    </configuration> 
-</plugin> 
-``` 
+   <plugin>
+      <artifactId>maven-assembly-plugin</artifactId>
+      <version>2.3</version>
+      <configuration>
+          <descriptor>src/main/assembly/assembly.xml</descriptor>
+      </configuration>
+      <executions>
+          <execution>
+              <id>make-assembly</id>
+              <phase>package</phase>
+              <goals>
+                  <goal>single</goal>
+              </goals>
+              <configuration>
+                  <archive>
+                      <manifest>
+                          <mainClass>com.sample.TestMain</mainClass>
+                      </manifest>
+                  </archive>
+              </configuration>
+          </execution>
+      </executions>
+   </plugin> 
+```
+
+## 4. Create an **assembly.xml** file on the directory **atmosphere/modules/cpr/src/main/assembly** with the following content
+
+```xml
+<assembly
+    xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.3 http://maven.apache.org/xsd/assembly-1.1.3.xsd">
+    <id>fat-tests</id>
+    <formats>
+        <format>jar</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <outputDirectory>/</outputDirectory>
+            <useProjectArtifact>true</useProjectArtifact>
+            <unpack>true</unpack>
+            <scope>test</scope>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.directory}/test-classes</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>**/*.class</include>
+            </includes>
+            <useDefaultExcludes>true</useDefaultExcludes>
+        </fileSet>
+    </fileSets>
+</assembly>
+```
 
 ## 5. Run the command:
-    mvn clean compile assembly:single
+    mvn clean compile test-compile assembly:single
 
 ## 6. Check the content folder: 
-    atmosphere/.../module/target
+    atmosphere/modules/cpr/target
 
 ## 7. Identify the left and right commit hash. (git log --pretty=%P -n 1 <merge_commit_hash>)
     Run: git log --pretty=%P -n 1 ffc0c6e274094c6423e29d1c45bab1593b8fac7d
