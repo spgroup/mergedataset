@@ -9,7 +9,7 @@
     http://repo.spring.io change to https://repo.spring.io
 ```
 
-## 4. Open the pom file in **spring-boot/pom.xml** and add the code into tag **<plugins>**:
+## 4. Open the pom file in spring-boot/pom.xml and add the code into tag <plugins>:
 ```xml
     <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
@@ -27,7 +27,7 @@
 
 ```
 
-## 5. Inside the folder  **spring-boot** run the command:
+## 5. Inside the folder  spring-boot run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 6. Check the content folder: 

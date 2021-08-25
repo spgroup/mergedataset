@@ -26,7 +26,7 @@
     - mvn clean compile assembly:single
 ```
 
-## 5. Edit the **spring-boot\spring-boot-dependencies\pom.xml** add the plugin
+## 5. Edit the spring-boot\spring-boot-dependencies\pom.xml add the plugin
 ```xml
  <plugin>
         <artifactId>maven-assembly-plugin</artifactId> 
