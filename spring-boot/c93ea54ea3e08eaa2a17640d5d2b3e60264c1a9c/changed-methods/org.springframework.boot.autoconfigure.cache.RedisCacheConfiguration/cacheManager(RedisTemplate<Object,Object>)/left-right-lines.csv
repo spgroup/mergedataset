@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration,sink,55
+org.springframework.boot.autoconfigure.cache.RedisCacheConfiguration,source,60
