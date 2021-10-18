@@ -1,0 +1,6 @@
+org.apache.storm.kafka.spout.KafkaSpout,source,305
+org.apache.storm.kafka.spout.KafkaSpout,source,306
+org.apache.storm.kafka.spout.KafkaSpout,source,307
+org.apache.storm.kafka.spout.KafkaSpout,source,312
+org.apache.storm.kafka.spout.KafkaSpout,sink,316
+org.apache.storm.kafka.spout.KafkaSpout,sink,319
