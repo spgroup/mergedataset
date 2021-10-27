@@ -19,10 +19,8 @@ def fetchJars():
             commitSHA = values[1]
             new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "original", values)
             new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "transformed", values)
+            new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "serialized", values)
         except Exception as e:
-            print(key)
-            print(parsedOutput[key])
-            print("AQUI")
             print(e)
     create_final_output_file(outputPath, new_output)
 
@@ -45,11 +43,17 @@ def create_final_output_file_object(outputPath, contents):
     employee_writer.writerow(contents)
 
 def format_output(values, merge, left, right, base, version):
-    jars_available = "true"
-    if (merge == "" and base == "" and (left == "" or right == "")):
-        jars_available = "false"
-
-    return values[0]+","+jars_available+","+values[1]+","+values[2]+","+values[3]+","+values[4]+","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+base+","+left+","+right+","+merge+","+version+",\n"
+    if (len(values) > 0):
+        jars_available = "true"
+        if (merge == "" and base == "" and (left == "" or right == "")):
+            jars_available = "false"
+        if (version == "serialized"):
+            first_target_class = values[5].split("|")[0].rsplit('.',1)[0]
+            values[5] = values[5] +" | "+first_target_class+".SerializedObjectSupporter"
+            print(first_target_class)
+        return values[0]+","+jars_available+","+values[1]+","+values[2]+","+values[3]+","+values[4]+","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+base+","+left+","+right+","+merge+","+version+",\n"
+    else:
+        return "";
 
 def read_output(outputPath):
     try:
@@ -61,7 +65,6 @@ def read_output(outputPath):
         return parse_output(fileOutLines)
     except Exception as e:
         print(e)
-        print("AQUI-2")
 
 def parse_output(lines):
     result = {}
