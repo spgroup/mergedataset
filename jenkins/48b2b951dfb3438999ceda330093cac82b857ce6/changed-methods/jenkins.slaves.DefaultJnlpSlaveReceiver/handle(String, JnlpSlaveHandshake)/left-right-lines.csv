@@ -1,2 +1,4 @@
+jenkins.slaves.DefaultJnlpSlaveReceiver,sink,52
+jenkins.slaves.DefaultJnlpSlaveReceiver,source,52
 jenkins.slaves.DefaultJnlpSlaveReceiver,source,56
 jenkins.slaves.DefaultJnlpSlaveReceiver,source,57
