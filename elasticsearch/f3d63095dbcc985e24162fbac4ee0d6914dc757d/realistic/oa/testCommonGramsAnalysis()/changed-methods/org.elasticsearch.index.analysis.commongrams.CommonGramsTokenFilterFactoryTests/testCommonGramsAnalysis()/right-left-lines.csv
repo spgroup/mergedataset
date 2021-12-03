@@ -1,0 +1,3 @@
+org.elasticsearch.index.analysis.commongrams.CommonGramsTokenFilterFactoryTests,source,144
+org.elasticsearch.index.analysis.commongrams.CommonGramsTokenFilterFactoryTests,sink,141
+org.elasticsearch.index.analysis.commongrams.CommonGramsTokenFilterFactoryTests,sink,143
