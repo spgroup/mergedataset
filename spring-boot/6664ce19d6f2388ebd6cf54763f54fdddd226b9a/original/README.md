@@ -39,6 +39,9 @@
 Next move the class spring-boot/spring-boot/src/test/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java to the new location spring-boot/spring-boot/src/main/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java
 
 ## 7. Inside the folder spring-boot/spring-boot run the command:
+Next move the class spring-boot/spring-boot/src/test/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java to the new location spring-boot/spring-boot/src/main/java/org/springframework/boot/jta/atomikos/AtomikosPropertiesTests.java
+
+## 7.1 Inside the folder  **spring-boot** run the command:
     mvn clean compile -DskipTests assembly:single
 
 ## 8. Check the content folder: 
