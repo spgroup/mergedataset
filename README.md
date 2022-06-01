@@ -28,3 +28,8 @@ Some build files are larger than 100 MB, not supported by Github, so they were s
 ```
 ./prepareDataset.sh
 ```
+
+## Attentions When Using Windows
+If you use Windows as your operating system, when you clone this project, you will probably receive an error message due to the size of a few file names. This problem will make it impossible for you to clone this repository.
+
+To resolve this, you must install the Windows Linux Subsystem; just follow the steps outlined in this [guide](https://docs.microsoft.com/pt-br/windows/wsl/install-win10). At the end of the installation, just open the Linux terminal on your Windows and clone the project as usual.
