@@ -1,0 +1,2 @@
+org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer,sink,114
+org.springframework.boot.autoconfigure.logging.AutoConfigurationReportLoggingInitializer,source,110
