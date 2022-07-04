@@ -24,3 +24,9 @@ cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/base/build*
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/left/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/left/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/merge/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/merge/buildFinal.jar
 cat spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/right/build* > spring-boot/fdd3f12ee0f92ac18844c08bf71df39feebb6673/transformed/right/buildFinal.jar
+cat java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/base/build* > java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/base/buildFinal.jar
+cat java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/left/build* > java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/left/buildFinal.jar
+cat java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/right/build* > java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/right/buildFinal.jar
+cat java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/merge/build* > java-faker/ca42fcfaf45cae1754c58e02e1d5d2a58ec03561/serialized/merge/buildFinal.jar
+
+
