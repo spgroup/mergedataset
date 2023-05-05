@@ -1,1 +1,0 @@
-Needed to be manually changed because both left and right modified a line that had both changes incorporated by the integrator. Also the method is in inner class, so the classpath needed to be adjusted so that the line could be correcly referenced
