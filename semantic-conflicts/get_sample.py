@@ -1,8 +1,9 @@
 import sys
 import os
 import csv
+import argparse
 
-def fetchJars():
+def fetchJars(getSerialized):
     outputPath = os.getcwd()
     merge_scenarios_directory = outputPath.split("semantic-conflicts")[0]
     merge_scenarios_file = "results-only.csv"
@@ -19,18 +20,38 @@ def fetchJars():
             commitSHA = values[1]
             new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "original", values)
             new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "transformed", values)
-            new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "serialized", values)
+            if getSerialized:
+                new_output += get_version_for_commit(merge_scenarios_directory, commitSHA, "serialized", values)
         except Exception as e:
+            print(key)
+            print(parsedOutput[key])
             print(e)
     create_final_output_file(outputPath, new_output)
 
 def get_version_for_commit(outputPath, commitSHA, version, values):
+    target_method_name = values[6].split('(')[0]
     release = get_local_jars_for_commit(outputPath, commitSHA, version, values[0])
-    base = get_all_jars_for_revision(release, "base")
-    left = get_all_jars_for_revision(release, "left")
-    right = get_all_jars_for_revision(release, "right")
-    merge = get_all_jars_for_revision(release, "merge")
+    if (release == ""):
+        return release
+        
+    base_jars_list = get_all_jars_for_revision(release, "base")
+    base = jars_list_to_string(base_jars_list, version, target_method_name)
+    
+    left_jars_list = get_all_jars_for_revision(release, "left")
+    left = jars_list_to_string(left_jars_list, version, target_method_name)
+    
+    right_jars_list = get_all_jars_for_revision(release, "right")
+    right = jars_list_to_string(right_jars_list, version, target_method_name)
+    
+    merge_jars_list = get_all_jars_for_revision(release, "merge")
+    merge = jars_list_to_string(merge_jars_list, version, target_method_name)
+    
     return format_output(values, merge, left, right, base, version)
+
+def jars_list_to_string(jars_list, version, target_method_name):
+    if (version == 'serialized'):
+        jars_list = [jar for jar in jars_list if target_method_name in jar]
+    return ':'.join(jars_list)
 
 def create_final_output_file(outputPath, contents):
    with open(outputPath + "/results_semantic_study.csv", 'w') as outputFile:
@@ -43,17 +64,11 @@ def create_final_output_file_object(outputPath, contents):
     employee_writer.writerow(contents)
 
 def format_output(values, merge, left, right, base, version):
-    if (len(values) > 0):
-        jars_available = "true"
-        if (merge == "" and base == "" and (left == "" or right == "")):
-            jars_available = "false"
-        if (version == "serialized"):
-            first_target_class = values[5].split("|")[0].rsplit('.',1)[0]
-            values[5] = values[5] +" | "+first_target_class+".SerializedObjectSupporter"
-            print(first_target_class)
-        return values[0]+","+jars_available+","+values[1]+","+values[2]+","+values[3]+","+values[4]+","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+base+","+left+","+right+","+merge+","+version+",\n"
-    else:
-        return "";
+    jars_available = "true"
+    if (merge == "" and base == "" and (left == "" or right == "")):
+        jars_available = "false"
+
+    return values[0]+","+jars_available+","+values[1]+","+values[2]+","+values[3]+","+values[4]+","+values[5]+","+values[6]+","+values[7]+","+values[8]+","+base+","+left+","+right+","+merge+","+version+",\n"
 
 def read_output(outputPath):
     try:
@@ -74,20 +89,25 @@ def parse_output(lines):
             result[cells[1]+"-"+cells[5]+"-"+cells[6]] = line
     return result
 
-def get_local_jars(path, directory):
-    command = 'find '+str(path)+ ' -name ' +str(directory)
-    return os.popen(command).read().split("\n")[:-1][0]
-
 def get_local_jars_for_commit(path, commit, directory, projectName):
-    command = 'find '+str(path)+ ' -name ' +str(commit)
-    return get_local_jars(path+projectName+"/"+commit+"/", directory)
+    local_jars_directory = '/'.join([path[:-1], projectName, commit, directory])
+    if (os.path.isdir(local_jars_directory)):
+        return local_jars_directory
+    else:
+        if 'serialized' in directory:
+            print(f"\033[93m WARNING: folder {local_jars_directory} not found!")
+        else:
+            print(f"\033[91m ERROR: folder {local_jars_directory} not found!")
+        return ""
 
 def get_all_jars_for_revision(path, revision):
     command = 'find '+str(path)+ '/'+str(revision)+' -name "*.jar"'
     jars = os.popen(command).read().split("\n")[:-1]
-    all_jars = ""
-    for one_jar in jars:
-        all_jars += str(one_jar)+str(":")
-    return all_jars
+    return jars
 
-fetchJars()
+parser = argparse.ArgumentParser(description='Get jars for the semantic conflicts study')
+parser.add_argument('--serialized', help='Get serialized jars', default=False, action='store_true')
+args = parser.parse_args()
+
+# TODO: modificar isso antes de subir
+fetchJars(True)
