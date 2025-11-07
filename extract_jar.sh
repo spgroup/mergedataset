@@ -1,6 +1,6 @@
 #!/bin/bash
 
-merge_dirs=$(find . -type d -path "*/original-without-dependencies/merge")
+merge_dirs=$(find . -type d -path "*/original/merge")
 
 for dir in $merge_dirs; do
   cd "$dir"
