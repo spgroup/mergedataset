@@ -3,11 +3,11 @@
 This repository groups a set of merge scenarios with known semantic conflicts, which were collected from related studies.
 
 The scenarios are grouped by projects, which may have different merge scenarios. For each merge scenario, you can find:
-1. Two projects versions associated with each commit of the merge scenario;
+1. Two project versions associated with each commit of the merge scenario;
   * Original version: jar files generated using the original source code.
-  * Transformed version: jar files generated using transformed code; these transformations change the method and attribute  visibility, and inclusion of empty constructor in the class and its dependencies, where the semantic conflict happen.
-2. The different versions of the class file, that holds the semantic conflict;
-3. `changed-methods/.../left-right-lines.csv` and `changed-methods/.../right-left-lines.csv` files identifying changed lines across merge parents;
+  * Transformed version: jar files generated using transformed code; these transformations change the method and attribute visibility, and include an empty constructor in the class having the semantic conflict, and in its dependencies.
+2. The different versions (merge, base, left and right) of the class file that holds the semantic conflict;
+3. `changed-methods/.../left-right-lines.csv` and `changed-methods/.../right-left-lines.csv` files identifying changed lines in the left and right merge parents;
 4. A README file with guidelines to build each commit locally.
 
 > **Note on Missing/Incomplete changed lines:**
