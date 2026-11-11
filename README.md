@@ -3,11 +3,18 @@
 This repository groups a set of merge scenarios with known semantic conflicts, which were collected from related studies.
 
 The scenarios are grouped by projects, which may have different merge scenarios. For each merge scenario, you can find:
-1. Two projects versions associated with each commit of the merge scenario;
+1. Two project versions associated with each commit of the merge scenario;
   * Original version: jar files generated using the original source code.
-  * Transformed version: jar files generated using transformed code; these transformations change the method and attribute  visibility, and inclusion of empty constructor in the class and its dependencies, where the semantic conflict happen.
-2. The different versions of the class file, that holds the semantic conflict;
-3. A README file with guidelines to build each commit locally.
+  * Transformed version: jar files generated using transformed code; these transformations change the method and attribute visibility, and include an empty constructor in the class having the semantic conflict, and in its dependencies.
+2. The different versions (merge, base, left and right) of the class file that holds the semantic conflict;
+3. `changed-methods/.../left-right-lines.csv` and `changed-methods/.../right-left-lines.csv` files identifying changed lines in the left and right merge parents;
+4. A README file with guidelines to build each commit locally.
+
+> **Note on Missing/Incomplete changed lines:**
+> Some scenarios have missing or incomplete line mappings (e.g., only 'left' or only 'right' lines recorded). These cases had textual merge conflicts resolved manually by an integrator in one of the following ways, breaking direct line correspondence with the original commits:
+> * The lines changed by one or both sides were altered during resolution;
+> * Changes from both branches were merged into a single consolidated line;
+> * The integrator introduced a separate custom implementation, overriding the original branch changes.
 
 ## Semantic Conflicts - CVS File
 The file [sample-semantic-conflicts.csv](https://github.com/spgroup/mergedataset/blob/master/semantic-conflicts/sample-semantic-conflicts.csv) groups the merge scenarios that are part of our dataset. In this file, you can find:
